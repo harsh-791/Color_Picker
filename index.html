@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Color Picker and Visualizer</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <meta name="description" content="An advanced color picker and visualizer tool for designers and developers.">
+</head>
+<body>
+    <div class="container">
+        <h1>Color Picker and Visualizer</h1>
+        <div class="color-picker-container">
+            <input type="color" id="colorPicker" value="#ff0000" aria-label="Color Picker">
+            <div id="colorDisplay" class="pulse">#FF0000</div>
+            <div class="controls">
+                <button id="toggleFormat" aria-label="Toggle color format">
+                    <i class="fas fa-exchange-alt"></i> Format
+                </button>
+                <button id="copyColor" aria-label="Copy color">
+                    <i class="fas fa-copy"></i> Copy
+                </button>
+                <button id="randomColor" aria-label="Generate random color">
+                    <i class="fas fa-random"></i> Random
+                </button>
+            </div>
+        </div>
+        <div class="info-container">
+            <h2>Color Information</h2>
+            <div id="colorDetails"></div>
+            <div id="accessibilityInfo"></div>
+        </div>
+        <div class="color-palettes">
+            <h2>Color Palettes</h2>
+            <div class="palette-types">
+                <button id="analogousPalette">Analogous</button>
+                <button id="complementaryPalette">Complementary</button>
+                <button id="triadicPalette">Triadic</button>
+                <button id="tetradicPalette">Tetradic</button>
+            </div>
+            <div id="paletteDisplay"></div>
+        </div>
+        <div class="color-adjuster">
+            <h2>Adjust Color</h2>
+            <div class="slider-container">
+                <label for="hueSlider">Hue:</label>
+                <input type="range" id="hueSlider" min="0" max="360" value="0">
+            </div>
+            <div class="slider-container">
+                <label for="saturationSlider">Saturation:</label>
+                <input type="range" id="saturationSlider" min="0" max="100" value="100">
+            </div>
+            <div class="slider-container">
+                <label for="lightnessSlider">Lightness:</label>
+                <input type="range" id="lightnessSlider" min="0" max="100" value="50">
+            </div>
+        </div>
+        <div id="historyContainer">
+            <h2>Color History</h2>
+            <div id="colorHistory"></div>
+        </div>
+    </div>
+    <div id="notification" class="notification" aria-live="polite"></div>
+    <script src="script.js"></script>
+</body>
+</html>
